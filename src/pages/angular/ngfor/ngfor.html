@@ -15,4 +15,9 @@
 
 <ion-content padding>
 
+    <div *ngFor="let pessoa of array; let i = index">
+        {{ i }}) {{ pessoa.nome }}
+        <p *ngFor="let nota of pessoa.notas">{{ nota }}</p>
+    </div>
+    <button (click)="funcao(i)">Excluir</button>
 </ion-content>

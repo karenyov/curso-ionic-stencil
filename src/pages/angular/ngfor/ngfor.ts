@@ -15,6 +15,11 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class NgforPage {
 
+  public array: any = [
+    {nome: 'Gabriel', sobrenome: 'Barreto', notas: [1,2,3,4,5]},
+    {nome: 'Gabriel', sobrenome: 'Barreto', notas: [1,2,3,4,5]}
+  ];
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 

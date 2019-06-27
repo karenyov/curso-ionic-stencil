@@ -14,5 +14,13 @@
 
 
 <ion-content padding>
-
+    <h1>{{ valor }}</h1>
+    <h1>{{ valor + valor2 }}</h1>
+    <h1>{{ retornaValor() }}</h1>
+    <br><hr><br>
+    <ion-item>
+        <ion-label>Nome</ion-label>
+        <ion-input type="text" [(ngModel)]="nome"></ion-input>
+    </ion-item>
+    {{ nome }}
 </ion-content>

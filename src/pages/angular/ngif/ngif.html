@@ -14,5 +14,9 @@
 
 
 <ion-content padding>
-
+    <button ion-button (click)="logado = !logado">Alterar Status</button>
+    <div *ngIf="logado; else blocoElse">Usuário realizou o login</div>
+    <ng-template #blocoElse>
+        <div>Usuário não está logado!</div>
+    </ng-template>
 </ion-content>
