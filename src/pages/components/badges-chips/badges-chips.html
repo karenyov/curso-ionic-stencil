@@ -15,4 +15,35 @@
 
 <ion-content padding>
 
+    <ion-item>
+        <ion-icon name="logo-facebook"></ion-icon>
+        Amigos
+        <ion-badge item-end [color]="amigos > 5? 'danger' : 'secondary'">{{ amigos }}</ion-badge>
+    </ion-item>
+    <br>
+    <ion-chip color="secondary">
+        <ion-label color="primary">Padrão</ion-label>
+    </ion-chip>
+    <br>
+    <ion-chip>
+        <ion-label>Minha Localização</ion-label>
+        <ion-icon name="pin" color="dark"></ion-icon>
+    </ion-chip>
+    <br>
+    <ion-chip>
+        <ion-avatar>
+            <img src="https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_960_720.png" alt="avatar" />
+        </ion-avatar>
+        <ion-label>
+            Usuário X
+        </ion-label>
+    </ion-chip>
+    <br>
+    <ion-chip #chip1>
+        <ion-icon name="pin" color="dark"></ion-icon>
+        <ion-label>Minha Localização</ion-label>
+        <button ion-button clear (click)="deletarPin(chip1)">
+            <ion-icon name="close"></ion-icon>
+        </button>
+    </ion-chip>
 </ion-content>

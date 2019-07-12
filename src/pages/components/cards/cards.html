@@ -14,5 +14,64 @@
 
 
 <ion-content padding>
-
+    <ion-card>
+        <ion-card-header>
+            <h1>Cabeçalho</h1>
+        </ion-card-header>
+        <ion-list>
+            <button ion-item *ngFor="let n of [0,1,2,3,4]">
+                <ion-icon name="star"></ion-icon>
+                Lista
+            </button>
+        </ion-list>
+    </ion-card>
+    <br>
+    <ion-card>
+        <img src="https://ionicframework.com/dist/preview-app/www/assets/img/nin-live.png" alt="Nine">
+        <ion-card-content>
+            <h2>Nine Inch Nails</h2>
+            <p>Lorem ipsum...</p>
+        </ion-card-content>
+    </ion-card>
+    <br>
+    <ion-card id="card-imagem">
+        <img src="https://ionicframework.com/dist/preview-app/www/assets/img/card-saopaolo.png" alt="São Paulo">
+        <div class="titulo-card">São Paulo</div>
+        <div class="subtitulo-card">Cidade da garoa</div>
+    </ion-card>
+    <br>
+    <ion-card>
+        <ion-item>
+            <ion-avatar item-start>
+                <img src="https://ionicframework.com/dist/preview-app/www/assets/img/marty-avatar.png" alt="Perfil">
+                <h2>Gabriel</h2>
+                <p>10/10/2010</p>
+                <ion-note>
+                    8a atrás.
+                </ion-note>
+            </ion-avatar>
+        </ion-item>
+        <ion-card-content>
+            lorem ...
+        </ion-card-content>
+        <ion-row>
+            <ion-col>
+                <button ion-button icon-left clear small color="danger">
+                    <ion-icon icon name="trash"></ion-icon>
+                    <div>Excluir</div>
+                </button>
+            </ion-col>
+            <ion-col>
+                <button ion-button icon-left clear small color="secondary">
+                    <ion-icon icon name="text"></ion-icon>
+                    <div>4 Comentários</div>
+                </button>
+            </ion-col>
+            <ion-col>
+                <button ion-button icon-only icon-left clear small color="secondary">
+                    <ion-icon icon name="more"></ion-icon>
+                </button>
+            </ion-col>
+        </ion-row>
+    </ion-card>
 </ion-content>

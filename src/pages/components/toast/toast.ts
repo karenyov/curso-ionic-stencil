@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angular';
 
 /**
  * Generated class for the ToastPage page.
@@ -15,11 +15,35 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class ToastPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public toastCtrl: ToastController) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ToastPage');
+  }
+
+  apresentarToast = () => {
+    const toast = this.toastCtrl.create({
+      message: 'Esse é um toast',
+      showCloseButton: true,
+      closeButtonText: 'OK',
+      position: 'middle',
+      cssClass: 'meu-toast'
+    });
+
+    toast.present();
+
+    setTimeout(() => {
+      toast.setMessage('Confirma logo isso aí')
+    }, 3000);
+
+    toast.onDidDismiss(() => {
+      console.log('foi dispensado');
+    });
+
+    toast.onWillDismiss(() => {
+      console.log('vai ser dispensado');
+    });
   }
 
 }
