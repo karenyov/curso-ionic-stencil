@@ -15,11 +15,26 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class RangePage {
 
+  public range1: number = 0;
+  public range2: number = 0;
+  public range3: number = 0;
+  public range4: number = 0;
+  public range5: number = 0;
+  public range6: number = 0;
+  public range7 = {
+    lower: 0,
+    upper: 100
+  };
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad RangePage');
+  }
+
+  valorMudou = () => {
+    console.log(this.range7);
   }
 
 }

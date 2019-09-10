@@ -6,13 +6,91 @@
 -->
 <ion-header>
 
-    <ion-navbar>
-        <ion-title>Lists</ion-title>
-    </ion-navbar>
+  <ion-navbar>
+    <ion-title>Lists</ion-title>
+  </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
+  <!-- lista básica-->
+  <ion-list>
+    <ion-item *ngFor="let i of [0,1,2,3]">Teste</ion-item>
+  </ion-list>
+  <hr>
+  <!-- Sem linhas-->
+  <ion-list no-lines>
+    <ion-item *ngFor="let i of [0,1,2,3]">Teste</ion-item>
+  </ion-list>
+  <hr>
 
+  <!-- Lista inset-->
+  <ion-list inset>
+    <ion-item *ngFor="let i of [0,1,2,3]">Teste</ion-item>
+  </ion-list>
+  <hr>
+
+  <!-- divisor-->
+  <ion-list>
+    <ion-item-group>
+      <ion-item-divider color="secondary">A</ion-item-divider>
+      <ion-item *ngFor="let i of [0,1,2,3]">Teste</ion-item>
+    </ion-item-group>
+  </ion-list>
+
+  <!-- Cabeçalho-->
+  <ion-list>
+    <ion-list-header color="primary">
+      Cabeçalho
+    </ion-list-header>
+    <ion-item *ngFor="let i of [0,1,2,3]">Teste</ion-item>
+  </ion-list>
+  <hr>
+
+  <!-- icone -->
+  <ion-list>
+    <ion-list-header color="primary">
+      Cabeçalho
+    </ion-list-header>
+    <ion-item *ngFor="let i of [0,1,2,3]">
+      <ion-icon name="trash" color="danger" item-end></ion-icon>
+      Teste
+    </ion-item>
+  </ion-list>
+
+  <hr>
+  <!-- Multiplas linhas -->
+  <ion-list>
+    <ion-item *ngFor="let i of [0,1,2,3]">
+      <h1>Teste</h1>
+      <h2>Olá Mundo</h2>
+      <p>Bem vindo as listas</p>
+    </ion-item>
+  </ion-list>
+  <hr>
+
+  <!-- sliding buttons-->
+  <ion-list>
+    <ion-item-sliding *ngFor="let i of [0,1,2,3]">
+      <ion-item>
+        <h1>Teste</h1>
+      </ion-item>
+      <ion-item-options side="left">
+        <button ion-button color="danger">
+          <ion-icon name="trash"></ion-icon>
+          Excluir
+        </button>
+      </ion-item-options>
+
+      <ion-item-options side="right">
+        <button ion-button color="light">
+          <ion-icon name="more"></ion-icon>
+          Opções
+        </button>
+      </ion-item-options>
+
+    </ion-item-sliding>
+
+  </ion-list>
 </ion-content>

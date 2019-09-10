@@ -6,13 +6,44 @@
 -->
 <ion-header>
 
-    <ion-navbar>
-        <ion-title>Item</ion-title>
-    </ion-navbar>
+  <ion-navbar>
+    <ion-title>Item</ion-title>
+  </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
+  <!--
+    detail-none: remove seta à direita
+    detail-push: add seta à direita
+  -->
+  <ion-item detail-push>
+    <ion-label stacked>
+      <h2>Este é um item</h2>
+    </ion-label>
+    <div item-content>Conteúdo</div>
+  </ion-item>
+  <ion-list-header>
+    <h2>Header</h2>
+  </ion-list-header>
+  <ion-item-divider>
+    <h2>Divider</h2>
+  </ion-item-divider>
+  <hr>
+  <button ion-item>Botão
+    <div item-content>Conteúdo</div>
+  </button>
+
+  <ion-item>
+    <ion-icon name="star" item-start></ion-icon>
+    <h2>Este é um item</h2>
+    <ion-note item-end>Note</ion-note>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Radio</ion-label>
+    <ion-radio checked item-start>Radio</ion-radio>
+  </ion-item>
 
 </ion-content>

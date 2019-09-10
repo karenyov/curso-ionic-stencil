@@ -6,13 +6,30 @@
 -->
 <ion-header>
 
-    <ion-navbar>
-        <ion-title>Icons</ion-title>
-    </ion-navbar>
+  <ion-navbar>
+    <ion-title>Icons</ion-title>
+  </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
+  <!-- icone comum para todas as plataformas dinamicamente -->
+  <ion-icon name="star"></ion-icon>
+
+  <!-- icones específicos para cada plataforma -->
+  <ion-icon ios="os-star" md="md-home"></ion-icon>
+
+  <!-- icone cespecífico de uma plataforma para todas -->
+  <ion-icon name="ios-clock"></ion-icon>
+
+  <!-- mudar a cor do icone -->
+  <ion-icon name="ios-clock" color="danger"></ion-icon>
+
+  <!-- ativo ou inativo -->
+  <ion-icon name="ios-clock" isActive="false"></ion-icon>
+
+  <!-- icones dinâmicos através da classe -->
+  <ion-icon [name]="icone"></ion-icon>
 
 </ion-content>

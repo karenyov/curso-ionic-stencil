@@ -6,13 +6,23 @@
 -->
 <ion-header>
 
-    <ion-navbar>
-        <ion-title>Virtual Scroll</ion-title>
-    </ion-navbar>
+  <ion-navbar>
+    <ion-title>Virtual Scroll</ion-title>
+  </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
-
+  <ion-list [virtualScroll]="itens" [headerFn]="funcaoHeader">
+    <ion-item-divider *virtualHeader="let header">
+      Divisão: {{ header }}
+    </ion-item-divider>
+    <ion-item *virtualItem="let item">
+      <ion-avatar item-start>
+        <ion-img [src]="item.avatar"></ion-img>
+      </ion-avatar>
+      {{ item.nome }} {{ item.sobrenome }}
+    </ion-item>
+  </ion-list>
 </ion-content>

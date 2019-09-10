@@ -15,11 +15,15 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class HeaderPage {
 
+  public showNavbar: boolean = false;
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad HeaderPage');
+    setInterval(() => {
+      this.showNavbar = !this.showNavbar;
+    }, 3000);
   }
 
 }

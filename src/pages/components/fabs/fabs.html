@@ -6,13 +6,44 @@
 -->
 <ion-header>
 
-    <ion-navbar>
-        <ion-title>FABs</ion-title>
-    </ion-navbar>
+  <ion-navbar>
+    <ion-title>FABs</ion-title>
+  </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
+  <!-- FAB COMUM-->
+  <button ion-fab>
+    <ion-icon name="add"></ion-icon>
+  </button>
 
+  <!-- FAB DE VERDADE -->
+  <ion-fab top right edge>
+    <button ion-fab>
+      <ion-icon name="add"></ion-icon>
+    </button>
+  </ion-fab>
+
+  <!-- LISTA-->
+  <ion-fab bottom right edge>
+    <button ion-fab color="dark">
+      <ion-icon name="share"></ion-icon>
+    </button>
+    <ion-fab-list side="top">
+      <button ion-fab>
+        <ion-icon name="logo-facebook"></ion-icon>
+      </button>
+      <button ion-fab>
+        <ion-icon name="logo-twitter"></ion-icon>
+      </button>
+      <button ion-fab>
+        <ion-icon name="logo-vimeo"></ion-icon>
+      </button>
+      <button ion-fab>
+        <ion-icon name="logo-instagram"></ion-icon>
+      </button>
+    </ion-fab-list>
+  </ion-fab>
 </ion-content>

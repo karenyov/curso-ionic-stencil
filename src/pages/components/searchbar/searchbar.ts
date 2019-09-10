@@ -15,11 +15,34 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class SearchbarPage {
 
+  public itens: Array<{ nome: string }> = [];
+  public itensFiltrados: Array<{ nome: string }> = [];
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad SearchbarPage');
+    this.itens = [{ nome: 'Alemanha' }, { nome: 'Brasil' }, { nome: 'Canada' }, { nome: 'Escocia' }, { nome: 'Finlandia' }, { nome: 'Groelandia' }];
+    this.inicializador();
+  }
+
+  inicializador = () => {
+    this.itensFiltrados = this.itens;
+  }
+
+  cancelar = () => console.log('cancelou');
+
+  limpou = () => console.log('limpou');
+
+  filter = ev => {
+    this.inicializador();
+    let val: string = ev.target.value;
+
+    if (val && val.trim() != '') {
+      this.itensFiltrados = this.itensFiltrados.filter(item => {
+        return (item.nome.toLowerCase().includes(val.toLowerCase()))
+      });
+    }
   }
 
 }

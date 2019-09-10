@@ -6,13 +6,29 @@
 -->
 <ion-header>
 
-    <ion-navbar>
-        <ion-title>Datetime</ion-title>
-    </ion-navbar>
+  <ion-navbar>
+    <ion-title>Datetime</ion-title>
+  </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
-
+  <!-- moment js-->
+  <ion-item>
+    <ion-label stacked>Datetime</ion-label>
+    <ion-datetime displayFormat="DDD, D de MMMM de YYYY" pickerFormat="DDD MMMM YYYY" cancelText="Cancelar"
+      doneText="Feito" min="2016" max="2020-12-20">
+    </ion-datetime>
+    <!--
+      displayFormat = como o horário selecionado deve ser exibido.
+      pickerFormat= Formato do componente de seleção da data
+      min e max = aceitam valores de data do tipo ISO 8601
+      dayName= nome do dia completo (segunda, terça, quarta...)
+      dayShortNames= nome abreviado (seg, ter, qua...)
+      montNames= nome do mês completo.
+      monthShortNames=Nome do mês abreviado.
+      Os atributos para nomes de dia e mês devem ser um array.
+    -->
+  </ion-item>
 </ion-content>

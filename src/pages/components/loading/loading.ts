@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, LoadingController } from 'ionic-angular';
 
 /**
  * Generated class for the LoadingPage page.
@@ -15,11 +15,20 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class LoadingPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public loadingCtrl: LoadingController) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad LoadingPage');
+    const loading = this.loadingCtrl.create({
+      content: 'Aguarde...',
+      dismissOnPageChange: false,
+      duration: 3000,
+      enableBackdropDismiss: false,
+      showBackdrop: true,
+      //spinner: ios | ios-small | buddles | circles | crescent |dots
+    });
+
+    loading.present();
   }
 
 }

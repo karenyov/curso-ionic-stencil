@@ -6,13 +6,52 @@
 -->
 <ion-header>
 
-    <ion-navbar>
-        <ion-title>Range</ion-title>
-    </ion-navbar>
+  <ion-navbar>
+    <ion-title>Range</ion-title>
+  </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
+  <ion-list>
+    <ion-list-header>{{ range1 }}</ion-list-header>
+    <ion-item>
+      <ion-range [(ngModel)]="range1"></ion-range>
+    </ion-item>
 
+    <ion-list-header>{{ range2 }}</ion-list-header>
+    <ion-item>
+      <ion-range [(ngModel)]="range2" min="-50" max="50"></ion-range>
+    </ion-item>
+
+    <ion-list-header>{{ range3 }}</ion-list-header>
+    <ion-item>
+      <ion-range [(ngModel)]="range3" step="5"></ion-range>
+    </ion-item>
+
+    <ion-list-header>{{ range4 }}</ion-list-header>
+    <ion-item>
+      <ion-range [(ngModel)]="range4" step="5" snaps="true"></ion-range>
+    </ion-item>
+
+    <ion-list-header>{{ range5 }}</ion-list-header>
+    <ion-item>
+      <ion-range [(ngModel)]="range5" pin="true"></ion-range>
+    </ion-item>
+
+    <ion-list-header>{{ range6 }}</ion-list-header>
+    <ion-item>
+      <ion-range [(ngModel)]="rang6">
+        <ion-label range-left>0</ion-label>
+        <ion-icon range-right name="sunny"></ion-icon>
+      </ion-range>
+    </ion-item>
+
+    <ion-list-header>{{ range7 }}</ion-list-header>
+    <ion-item>
+      <ion-range [(ngModel)]="range7" dualKnobs="true" (ionChange)="valorMudou()"></ion-range>
+    </ion-item>
+
+  </ion-list>
 </ion-content>

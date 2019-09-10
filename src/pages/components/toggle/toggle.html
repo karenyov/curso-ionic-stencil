@@ -15,4 +15,12 @@
 
 <ion-content padding>
 
+  <ion-item>
+    <ion-label>{{ toggle? 'Ligado...' : 'Desligado...'}}</ion-label>
+    <!--
+      disabled: Recebe um booleano e se for true desativa o toggle.
+    -->
+    <ion-toggle [(ngModel)]="toggle" color="danger"></ion-toggle>
+  </ion-item>
+
 </ion-content>

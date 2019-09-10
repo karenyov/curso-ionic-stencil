@@ -6,13 +6,18 @@
 -->
 <ion-header>
 
-    <ion-navbar>
-        <ion-title>Searchbar</ion-title>
-    </ion-navbar>
-
+  <ion-navbar>
+    <ion-title>Searchbar</ion-title>
+  </ion-navbar>
+  <ion-toolbar>
+    <ion-searchbar (ionInput)="filter($event)" placeholder="Digite uma busca..." (ionCancel)="cancelar()" (ionClear)="limpou()"
+      showCancelButton="true" cancelButtonText="'Cancelar'"></ion-searchbar>
+  </ion-toolbar>
 </ion-header>
 
 
 <ion-content padding>
-
+  <ion-list>
+    <ion-item *ngFor="let item of itensFiltrados">{{ item.nome }}</ion-item>
+  </ion-list>
 </ion-content>

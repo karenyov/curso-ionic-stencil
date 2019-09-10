@@ -6,13 +6,42 @@
 -->
 <ion-header>
 
-    <ion-navbar>
-        <ion-title>Footer</ion-title>
-    </ion-navbar>
-
+  <ion-navbar>
+    <ion-title>Footer</ion-title>
+  </ion-navbar>
+  <ion-toolbar>teste</ion-toolbar>
 </ion-header>
 
 
 <ion-content padding>
 
 </ion-content>
+
+<ion-footer>
+  <!--
+    0 - BACK-BUTTON
+    1 - MENU-TOGGLE DO INÍCIO
+    2 - BUTTONS ESQUERDA(left)
+    3 - BUTTONS INÍCIO (start)
+    4 - CONTEÚDO
+    5 - BUTTONS FINAL (end)
+    6 - BUTTONS DA DIREITA (right)
+    7 - MENU-TOGGLE DO FINAL
+  -->
+  <ion-toolbar>
+    <button ion-button menuToggle="left" clear>1</button>
+    <ion-buttons left>
+      <button ion-button clear>2</button>
+    </ion-buttons>
+    <ion-buttons start>
+      <button ion-button clear>3</button>
+    </ion-buttons>
+    <ion-title>4</ion-title>
+    <ion-buttons end>
+      <button ion-button clear>5</button>
+    </ion-buttons>
+    <ion-buttons right>
+      <button ion-button clear>6</button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

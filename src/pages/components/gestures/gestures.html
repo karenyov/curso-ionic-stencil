@@ -6,13 +6,47 @@
 -->
 <ion-header>
 
-    <ion-navbar>
-        <ion-title>Gestures</ion-title>
-    </ion-navbar>
+  <ion-navbar>
+    <ion-title>Gestures</ion-title>
+  </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
+  <ion-card (tap)="executarTap($event)">
+    <ion-item>
+      Tap: {{ tapped }} vezes
+    </ion-item>
+  </ion-card>
 
+  <ion-card (press)="executarPress($event)">
+    <ion-item>
+      Tap: {{ pressed }} vezes
+    </ion-item>
+  </ion-card>
+
+  <ion-card (pan)="executarPan($event)">
+    <ion-item>
+      Tap: {{ paned }} vezes
+    </ion-item>
+  </ion-card>
+
+  <ion-card (swipe)="executarSwipe($event)">
+    <ion-item>
+      Tap: {{ swiped }} vezes
+    </ion-item>
+  </ion-card>
+
+  <ion-card (rotate)="executarRotate($event)">
+    <ion-item>
+      Tap: {{ rotate }} vezes
+    </ion-item>
+  </ion-card>
+
+  <ion-card (pinch)="executarPinch($event)">
+    <ion-item>
+      Tap: {{ pinch }} vezes
+    </ion-item>
+  </ion-card>
 </ion-content>

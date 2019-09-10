@@ -6,13 +6,67 @@
 -->
 <ion-header>
 
-    <ion-navbar>
-        <ion-title>Inputs</ion-title>
-    </ion-navbar>
+  <ion-navbar>
+    <ion-title>Inputs</ion-title>
+  </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
+  <ion-list>
+    <ion-list-header>Inputs</ion-list-header>
+    <ion-item>
+      <ion-label fixed>Básico</ion-label>
+      <ion-input></ion-input>
+      <!-- (blur)="" Blur: é executado assim que o usuário deixa o foco do input atual -->
+      <!-- Input: é executado a cada caractere ou click ou click de botão -->
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Floating</ion-label>
+      <ion-input type="number" min="0" max="100" step="5"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>Stacked</ion-label>
+      <ion-input type="email" clearInput="true"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input type="email" placeholder="Email..." clearOnEdit="true"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input type="text" placeholder="autocomplete & correct" autocomplete="on" autocorrect="off"></ion-input>
+    </ion-item>
+    <ion-list-header>Select</ion-list-header>
+    <ion-item>
+      <ion-label>Select</ion-label>
+      <ion-select okText="BLZ" cancelText="Fechar" interface="action-sheet" selectedText="Selecionado...">
+        <!--(ionCancel)=""-->
+        <!-- INTERFACE: ACTION SHEET || POPOVER || ALERT -->
+        <ion-option [value]="CSS">CSS</ion-option>
+        <ion-option>HTML</ion-option>
+        <ion-option [value]="JS">JS</ion-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+  <ion-list-header>Textarea</ion-list-header>
+  <ion-item>
+    <ion-label stacked>Textarea</ion-label>
+    <ion-textarea rows="4" [(ngModel)]="textarea"></ion-textarea>
+  </ion-item>
+  <ion-list-header>Radio</ion-list-header>
+  <ion-list radio-group [(ngModel)]="radio">
+    <ion-item>
+      <ion-label>HTML</ion-label>
+      <ion-radio value="html"></ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label>CSS</ion-label>
+      <ion-radio value="css"></ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label>JS</ion-label>
+      <ion-radio value="js"></ion-radio>
+    </ion-item>
+  </ion-list>
 
 </ion-content>

@@ -14,12 +14,13 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'spinner.html',
 })
 export class SpinnerPage {
+  public pausada: boolean = true;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad SpinnerPage');
+    setInterval(() => this.pausada = ! this.pausada, 3000);
   }
 
 }

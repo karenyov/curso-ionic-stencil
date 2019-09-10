@@ -13,6 +13,9 @@
 </ion-header>
 
 
-<ion-content padding>
-
+<ion-content>
+  <ion-tabs selectedIndex="1" tabsPlacement="top" tabsLayout="icon-end" color="dark">
+    <ion-tab *ngFor="let tab of tabs" [root]="tab.componente" [tabTitle]="tab.nome" 
+      [tabIcon]="tab.icone" (ionChange)="changed(tab)" [tabBadge]="tab.badge" tabBadgeStyle="secondary" tabsHideOnSubPages="true"></ion-tab>
+  </ion-tabs>
 </ion-content>

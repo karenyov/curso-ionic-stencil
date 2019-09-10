@@ -1,3 +1,10 @@
 page-spinner {
 
+    ion-spinner * {
+        width: 50px;
+        height: 50px;
+        fill: #888 !important;
+        stroke: red !important;
+    }
+
 }

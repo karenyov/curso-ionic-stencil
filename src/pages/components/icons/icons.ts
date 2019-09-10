@@ -15,11 +15,16 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class IconsPage {
 
+  public icone: string = "home";
+  public icones: Array<string> = ["home", "star", "clock", "trash", "logo-twitter", "add", "create", "analytics"];
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad IconsPage');
+    setInterval(() => {
+      this.icone = this.icones[Math.round(Math.random() * (this.icones.length - 1))];
+    }, 3000);
   }
 
 }

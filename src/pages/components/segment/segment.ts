@@ -15,11 +15,15 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class SegmentPage {
 
+  public roupa: string = "";
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad SegmentPage');
   }
+
+  printar = tipo => console.log(tipo);
 
 }

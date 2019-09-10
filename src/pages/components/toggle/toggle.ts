@@ -15,6 +15,8 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class TogglePage {
 
+  public toggle: boolean = true;
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 

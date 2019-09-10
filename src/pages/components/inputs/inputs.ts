@@ -15,6 +15,12 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class InputsPage {
 
+  public textarea: string = "texto";
+  public radio: string = "css";
+  public form: object = {
+    nome: ''
+  };
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
