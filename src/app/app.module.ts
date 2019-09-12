@@ -7,13 +7,15 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 
+import { HttpClientModule } from '@angular/common/http';
+import { HttpModule } from '@angular/http';
 @NgModule({
   declarations: [
     MyApp,
     HomePage
   ],
   imports: [
-    BrowserModule,
+    BrowserModule, HttpClientModule, HttpModule,
     IonicModule.forRoot(MyApp, {
       monthNames: ['Janeiro',
         'Fevereiro',
@@ -27,7 +29,16 @@ import { HomePage } from '../pages/home/home';
         'Outubro',
         'Novembro',
         'Dezembro'],
-      dayShortNames: ['dom', 'seg', 'ter', 'qua', 'qui', 'sex', 'sab']
+      dayShortNames: ['dom', 'seg', 'ter', 'qua', 'qui', 'sex', 'sab'],
+      backButtonIcon: 'md-star',
+      platform: {
+        ios: {
+          backButtonText: 'Voltar'
+        },
+        android: {
+          backButtonText: 'Voltai'
+        }
+      }
     })
   ],
   bootstrap: [IonicApp],

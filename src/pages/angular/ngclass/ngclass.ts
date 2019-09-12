@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, Events } from 'ionic-angular';
 
 /**
  * Generated class for the NgclassPage page.
@@ -17,11 +17,15 @@ export class NgclassPage {
 
   public css: string = '';
   public condicao: boolean = false;
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public events: Events) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad NgclassPage');
+  }
+
+  dispararEvento = () => {
+    this.events.publish('user:login', Math.floor(Math.random() * 1000));
   }
 
 }

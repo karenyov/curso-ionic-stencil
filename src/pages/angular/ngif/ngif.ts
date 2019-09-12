@@ -22,4 +22,30 @@ export class NgifPage {
     console.log('ionViewDidLoad NgifPage');
   }
 
+  /**
+   * É executado antes do método de willLeave
+   */
+  ionViewCanLeave = () => {
+    if (Math.round(Math.random() * 10) > 1) {
+      console.log('pode sair');
+      return true;
+    } else {
+      console.log('Não pode sair');
+      return false;
+    }
+  }
+
+  /**
+   * É executado antes do did Load
+   */
+  ionViewCanEnter = () => {
+    if (Math.round(Math.random() * 10) > 5) {
+      console.log('pode entrar');
+      return true;
+    } else {
+      console.log('Não pode entrar');
+      return false;
+    }
+  }
+
 }

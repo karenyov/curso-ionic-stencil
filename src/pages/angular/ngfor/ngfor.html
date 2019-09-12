@@ -14,7 +14,7 @@
 
 
 <ion-content padding>
-
+    <h1 #element>Renderer</h1>
     <div *ngFor="let pessoa of array; let i = index">
         {{ i }}) {{ pessoa.nome }}
         <p *ngFor="let nota of pessoa.notas">{{ nota }}</p>
